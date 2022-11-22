@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Build results
+[Dd]ebug/
+x64/
+x86/
+
+# Visual Studio cache/options directory
+.vs/
