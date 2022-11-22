@@ -5,16 +5,21 @@
 #include <vector>
 
 #include "BubbleSort.h"
+#include "SelectionSort.h"
 #include "Printer.h"
 
 using namespace std;
 
 int main()
 {
-    vector<int> numbers { 5, 3, 4, 1, 2 };
+    vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
+    /*vector<int> numbers { 1, 2, 3, 4 };*/
 
-    BubbleSort bubblesort;
-    bubblesort.Sort(numbers);
+    /*BubbleSort bubbleSort;
+    bubbleSort.Sort(numbers);*/
+
+    SelectionSort selectionSort;
+    selectionSort.Sort(numbers);
 
     Printer printer;
     printer.Print(numbers);
