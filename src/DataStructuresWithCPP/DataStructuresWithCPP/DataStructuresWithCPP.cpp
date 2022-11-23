@@ -7,6 +7,7 @@
 #include "BubbleSort.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
+#include "Stack.h"
 #include "Printer.h"
 
 using namespace std;
@@ -14,7 +15,6 @@ using namespace std;
 int main()
 {
     //vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
-    vector<int> numbers { 5, 2, 1, 3 };
 
     /*BubbleSort bubbleSort;
     bubbleSort.Sort(numbers);*/
@@ -22,9 +22,22 @@ int main()
     /*SelectionSort selectionSort;
     selectionSort.Sort(numbers);*/
 
-    InsertionSort insertionSort;
-    insertionSort.Sort(numbers);
+    /*InsertionSort insertionSort;
+    insertionSort.Sort(numbers);*/
 
-    Printer printer;
-    printer.Print(numbers);
+    /*Printer printer;
+    printer.Print(numbers);*/
+
+    Stack stack;
+    stack.Add(10);
+    stack.Add(5);
+    stack.Add(3);
+    stack.Add(7);
+
+    stack.Show();
+    stack.ShowAll();
+
+    stack.Remove();
+    stack.Show();
+    stack.ShowAll();
 }

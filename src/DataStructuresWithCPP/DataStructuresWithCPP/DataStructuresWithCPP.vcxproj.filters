@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Sorting">
       <UniqueIdentifier>{1ca03979-df42-4e72-86f9-603e5e542e8e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Listing">
+      <UniqueIdentifier>{4ed2a88e-66bc-422e-b164-2a6c7b324dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Listing">
+      <UniqueIdentifier>{05e87972-f08a-4db0-9163-24657d2c7b96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructuresWithCPP.cpp">
@@ -36,6 +42,9 @@
     <ClCompile Include="InsertionSort.cpp">
       <Filter>Source Files\Sorting</Filter>
     </ClCompile>
+    <ClCompile Include="Stack.cpp">
+      <Filter>Source Files\Listing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -49,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="InsertionSort.h">
       <Filter>Header Files\Sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files\Listing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
