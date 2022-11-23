@@ -9,6 +9,7 @@
 #include "InsertionSort.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "Factorial.h"
 #include "Printer.h"
 
 using namespace std;
@@ -69,9 +70,19 @@ void RunListing()
     //queue.DequeueAll();
 }
 
+void RunRecursion()
+{
+    auto number = 5;
+    Factorial factorial;
+    long factorialResult = factorial.Run(number);
+    cout << "Factorial of " << number << " is " << factorialResult;
+}
+
 int main()
 {
     //RunSorting();
 
-    RunListing();
+    //RunListing();
+
+    RunRecursion();
 }

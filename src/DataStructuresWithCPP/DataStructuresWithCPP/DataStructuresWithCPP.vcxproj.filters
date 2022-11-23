@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Listing">
       <UniqueIdentifier>{05e87972-f08a-4db0-9163-24657d2c7b96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Recursion">
+      <UniqueIdentifier>{c41ff9f4-3c76-4f42-9156-c157ab32a33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Recursion">
+      <UniqueIdentifier>{f2657a3f-c0c4-4f0c-b850-1be0dbde490a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructuresWithCPP.cpp">
@@ -48,6 +54,9 @@
     <ClCompile Include="Queue.cpp">
       <Filter>Source Files\Listing</Filter>
     </ClCompile>
+    <ClCompile Include="Factorial.cpp">
+      <Filter>Source Files\Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -67,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="Queue.h">
       <Filter>Header Files\Listing</Filter>
+    </ClInclude>
+    <ClInclude Include="Factorial.h">
+      <Filter>Header Files\Recursion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

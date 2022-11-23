@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="DataStructuresWithCPP.cpp" />
+    <ClCompile Include="Factorial.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="Printer.cpp" />
     <ClCompile Include="Queue.cpp" />
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="Factorial.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="Printer.h" />
     <ClInclude Include="Queue.h" />
