@@ -5,12 +5,12 @@
 
 using namespace std;
 
-class Stack
+class Queue
 {
 public:
-	void Push(int number);
+	void Enqueue(int number);
 
-	void Pop();
+	void Unqueue();
 
 	void Show();
 

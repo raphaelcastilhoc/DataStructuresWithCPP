@@ -1,14 +1,13 @@
 #include "Stack.h"
-#include<ranges>
 
 vector<int> stack;
 
-void Stack::Add(int number)
+void Stack::Push(int number)
 {
 	stack.push_back(number);
 }
 
-void Stack::Remove()
+void Stack::Pop()
 {
 	stack.pop_back();
 }
