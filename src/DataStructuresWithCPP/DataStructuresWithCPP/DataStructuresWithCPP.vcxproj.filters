@@ -33,6 +33,9 @@
     <ClCompile Include="SelectionSort.cpp">
       <Filter>Source Files\Sorting</Filter>
     </ClCompile>
+    <ClCompile Include="InsertionSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SelectionSort.h">
+      <Filter>Header Files\Sorting</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionSort.h">
       <Filter>Header Files\Sorting</Filter>
     </ClInclude>
   </ItemGroup>
