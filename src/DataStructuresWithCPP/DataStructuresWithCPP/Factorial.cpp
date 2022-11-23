@@ -2,9 +2,9 @@
 
 long Factorial::Run(int number) 
 {
-	if (number == 1)
+	if (number <= 1)
 	{
-		return 1;
+		return number;
 	}
 
 	return number * Run(number - 1);

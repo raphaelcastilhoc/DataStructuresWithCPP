@@ -57,6 +57,9 @@
     <ClCompile Include="Factorial.cpp">
       <Filter>Source Files\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="Fibonacci.cpp">
+      <Filter>Source Files\Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files\Listing</Filter>
     </ClInclude>
     <ClInclude Include="Factorial.h">
+      <Filter>Header Files\Recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="Fibonacci.h">
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
   </ItemGroup>

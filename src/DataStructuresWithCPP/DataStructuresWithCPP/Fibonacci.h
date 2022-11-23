@@ -1,6 +1,8 @@
 #pragma once
-class Factorial
+
+class Fibonacci
 {
 public:
 	long Run(int number);
 };
+

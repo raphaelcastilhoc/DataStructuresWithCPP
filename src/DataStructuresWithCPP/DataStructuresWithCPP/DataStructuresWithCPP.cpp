@@ -10,6 +10,7 @@
 #include "Stack.h"
 #include "Queue.h"
 #include "Factorial.h"
+#include "Fibonacci.h"
 #include "Printer.h"
 
 using namespace std;
@@ -72,10 +73,16 @@ void RunListing()
 
 void RunRecursion()
 {
-    auto number = 5;
+    /*auto number = 5;
     Factorial factorial;
     long factorialResult = factorial.Run(number);
-    cout << "Factorial of " << number << " is " << factorialResult;
+    cout << "Factorial of " << number << " is: " << factorialResult;*/
+
+
+    auto number = 9;
+    Fibonacci fibonacci;
+    long fibonacciResult = fibonacci.Run(number);
+    cout << "Fibonacci of " << number << " is: " << fibonacciResult;
 }
 
 int main()
