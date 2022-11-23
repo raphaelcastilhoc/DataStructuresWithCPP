@@ -35,34 +35,38 @@ void RunSorting()
 
 void RunListing()
 {
-    /*cout << "Running Stack \n";
+    cout << "Running Stack \n";
     Stack stack;
     stack.Push(10);
     stack.Push(5);
     stack.Push(3);
     stack.Push(7);
 
-    stack.Show();
-    stack.ShowAll();
+    stack.Read();
+    stack.ReadAll();
 
     stack.Pop();
-    stack.Show();
-    stack.ShowAll();*/
+    stack.Read();
+    stack.ReadAll();
+
+    stack.PopAll();
 
 
-    cout << "Running Queue \n";
-    Queue queue;
-    queue.Enqueue(10);
-    queue.Enqueue(5);
-    queue.Enqueue(3);
-    queue.Enqueue(7);
+    //cout << "Running Queue \n";
+    //Queue queue;
+    //queue.Enqueue(10);
+    //queue.Enqueue(5);
+    //queue.Enqueue(3);
+    //queue.Enqueue(7);
 
-    queue.Show();
-    queue.ShowAll();
+    //queue.Read();
+    //queue.ReadAll();
 
-    queue.Unqueue();
-    queue.Show();
-    queue.ShowAll();
+    //queue.Dequeue();
+    //queue.Read();
+    //queue.ReadAll();
+
+    //queue.DequeueAll();
 }
 
 int main()

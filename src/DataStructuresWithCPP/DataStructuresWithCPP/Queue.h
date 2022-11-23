@@ -10,10 +10,12 @@ class Queue
 public:
 	void Enqueue(int number);
 
-	void Unqueue();
+	void Dequeue();
 
-	void Show();
+	void DequeueAll();
 
-	void ShowAll();
+	int Read();
+
+	vector<int> ReadAll();
 };
 

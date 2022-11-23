@@ -12,8 +12,10 @@ public:
 
 	void Pop();
 
-	void Show();
+	void PopAll();
 
-	void ShowAll();
+	int Read();
+
+	vector<int> ReadAll();
 };
 
