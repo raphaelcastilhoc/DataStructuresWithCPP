@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <filesystem>
 
 #include "BubbleSort.h"
 #include "SelectionSort.h"
@@ -11,9 +12,11 @@
 #include "Queue.h"
 #include "Factorial.h"
 #include "Fibonacci.h"
+#include "DirectoryFinder.h"
 #include "Printer.h"
 
 using namespace std;
+namespace fs = std::filesystem;
 
 void RunSorting()
 {
@@ -79,10 +82,13 @@ void RunRecursion()
     cout << "Factorial of " << number << " is: " << factorialResult;*/
 
 
-    auto number = 9;
+    /*auto number = 9;
     Fibonacci fibonacci;
     long fibonacciResult = fibonacci.Run(number);
-    cout << "Fibonacci of " << number << " is: " << fibonacciResult;
+    cout << "Fibonacci of " << number << " is: " << fibonacciResult;*/
+
+    DirectoryFinder directoryFinder;
+    directoryFinder.FindSubdirectories(fs::current_path().string());
 }
 
 int main()

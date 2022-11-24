@@ -60,6 +60,9 @@
     <ClCompile Include="Fibonacci.cpp">
       <Filter>Source Files\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="DirectoryFinder.cpp">
+      <Filter>Source Files\Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -84,6 +87,9 @@
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
     <ClInclude Include="Fibonacci.h">
+      <Filter>Header Files\Recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectoryFinder.h">
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
   </ItemGroup>
