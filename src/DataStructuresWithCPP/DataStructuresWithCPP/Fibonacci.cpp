@@ -1,6 +1,6 @@
 #include "Fibonacci.h"
 
-long Fibonacci::Run(int number)
+long Fibonacci::Run(long number)
 {
 	if (number <= 1)
 	{
