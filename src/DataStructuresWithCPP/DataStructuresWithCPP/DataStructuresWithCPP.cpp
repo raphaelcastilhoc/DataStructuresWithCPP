@@ -13,6 +13,7 @@
 #include "Factorial.h"
 #include "Fibonacci.h"
 #include "DirectoryFinder.h"
+#include "MaxNumber.h"
 #include "Printer.h"
 
 using namespace std;
@@ -87,8 +88,12 @@ void RunRecursion()
     long fibonacciResult = fibonacci.Run(number);
     cout << "Fibonacci of " << number << " is: " << fibonacciResult;*/
 
-    DirectoryFinder directoryFinder;
-    directoryFinder.FindSubdirectories(fs::current_path().string());
+    /*DirectoryFinder directoryFinder;
+    directoryFinder.FindSubdirectories(fs::current_path().string());*/
+
+    MaxNumber maxNumber;
+    auto result = maxNumber.Run(vector<int>{2, 8, 10, 4, 5});
+    cout << "Max number is: " << result;
 }
 
 int main()

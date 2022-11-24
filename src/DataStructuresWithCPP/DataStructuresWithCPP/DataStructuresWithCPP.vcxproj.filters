@@ -63,6 +63,9 @@
     <ClCompile Include="DirectoryFinder.cpp">
       <Filter>Source Files\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="MaxNumber.cpp">
+      <Filter>Source Files\Recursion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
     <ClInclude Include="DirectoryFinder.h">
+      <Filter>Header Files\Recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxNumber.h">
       <Filter>Header Files\Recursion</Filter>
     </ClInclude>
   </ItemGroup>
