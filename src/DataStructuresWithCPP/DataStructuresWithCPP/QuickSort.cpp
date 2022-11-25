@@ -2,45 +2,45 @@
 
 vector<int> elements;
 
-void SwapPositions(int& firstNumber, int& secondNumber)
+void SwapPositions(int& firstElement, int& secondElement)
 {
-	auto tempNumber = firstNumber;
-	firstNumber = secondNumber;
-	secondNumber = tempNumber;
+	auto tempNumber = firstElement;
+	firstElement = secondElement;
+	secondElement = tempNumber;
 }
 
-int Partition(int leftPointer, int rightPointer)
+int Partition(int leftIndex, int rightIndex)
 {
-	auto pivotIndex = rightPointer;
+	auto pivotIndex = rightIndex;
 	auto pivotValue = elements[pivotIndex];
 
-	rightPointer -= 1;
+	rightIndex -= 1;
 
 	while (true)
 	{
-		while (elements[leftPointer] < pivotValue)
+		while (elements[leftIndex] < pivotValue)
 		{
-			leftPointer += 1;
+			leftIndex += 1;
 		}
 
-		while (elements[rightPointer] > pivotValue)
+		while (elements[rightIndex] > pivotValue)
 		{
-			rightPointer -= 1;
+			rightIndex -= 1;
 		}
 
-		if (leftPointer >= rightPointer)
+		if (leftIndex >= rightIndex)
 		{
 			break;
 		}
 
-		SwapPositions(elements[leftPointer], elements[rightPointer]);
+		SwapPositions(elements[leftIndex], elements[rightIndex]);
 
-		leftPointer += 1;
+		leftIndex += 1;
 	}
 
-	SwapPositions(elements[leftPointer], elements[pivotIndex]);
+	SwapPositions(elements[leftIndex], elements[pivotIndex]);
 
-	return leftPointer;
+	return leftIndex;
 }
 
 void RunQuickSort(int leftIndex, int rightIndex)
