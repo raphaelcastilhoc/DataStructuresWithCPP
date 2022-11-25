@@ -137,6 +137,7 @@
     <ClCompile Include="MaxNumber.cpp" />
     <ClCompile Include="Printer.cpp" />
     <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="MaxNumber.h" />
     <ClInclude Include="Printer.h" />
     <ClInclude Include="Queue.h" />
+    <ClInclude Include="QuickSort.h" />
     <ClInclude Include="SelectionSort.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>

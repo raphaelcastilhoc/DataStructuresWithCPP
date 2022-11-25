@@ -66,6 +66,9 @@
     <ClCompile Include="MaxNumber.cpp">
       <Filter>Source Files\Recursion</Filter>
     </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -97,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="MaxNumber.h">
       <Filter>Header Files\Recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSort.h">
+      <Filter>Header Files\Sorting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

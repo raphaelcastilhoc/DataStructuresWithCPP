@@ -8,6 +8,7 @@
 #include "BubbleSort.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
+#include "QuickSort.h"
 #include "Stack.h"
 #include "Queue.h"
 #include "Factorial.h"
@@ -21,7 +22,8 @@ namespace fs = std::filesystem;
 
 void RunSorting()
 {
-    vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
+    //vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
+    vector<int> numbers { 0, 5, 2, 1, 6, 3 };
 
     /*cout << "Running Bubble Sort \n";
     BubbleSort bubbleSort;
@@ -31,9 +33,16 @@ void RunSorting()
     SelectionSort selectionSort;
     selectionSort.Sort(numbers);*/
 
-    cout << "Running Insertion Sort \n";
+    /*cout << "Running Insertion Sort \n";
     InsertionSort insertionSort;
-    insertionSort.Sort(numbers);
+    insertionSort.Sort(numbers);*/
+
+    /*Printer printer;
+    printer.Print(numbers);*/
+
+    cout << "Running Quick Sort \n";
+    QuickSort quickSort;
+    numbers = quickSort.Sort(numbers);
 
     Printer printer;
     printer.Print(numbers);
@@ -98,9 +107,9 @@ void RunRecursion()
 
 int main()
 {
-    //RunSorting();
+    RunSorting();
 
     //RunListing();
 
-    RunRecursion();
+    //RunRecursion();
 }
