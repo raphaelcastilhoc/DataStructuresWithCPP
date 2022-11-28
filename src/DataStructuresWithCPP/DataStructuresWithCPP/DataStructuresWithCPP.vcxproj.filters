@@ -78,6 +78,12 @@
     <ClCompile Include="QuickSelect.cpp">
       <Filter>Source Files\Selection</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedListNode.cpp">
+      <Filter>Source Files\Listing</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>Source Files\Listing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -115,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="QuickSelect.h">
       <Filter>Header Files\Selection</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\Listing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
