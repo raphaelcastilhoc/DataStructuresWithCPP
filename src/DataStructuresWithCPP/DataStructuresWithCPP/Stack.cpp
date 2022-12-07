@@ -2,13 +2,13 @@
 
 vector<int> stack;
 
-void Stack::Push(int element)
+void Stack::push(int element)
 {
 	stack.push_back(element);
 	cout << element << " stacked \n";
 }
 
-void Stack::Pop()
+void Stack::pop()
 {
 	if (!stack.empty())
 	{
@@ -18,15 +18,15 @@ void Stack::Pop()
 	}
 }
 
-void Stack::PopAll()
+void Stack::popAll()
 {
 	while (!stack.empty())
 	{
-		Pop();
+		pop();
 	}
 }
 
-int Stack::Read()
+int Stack::read()
 {
 	if (!stack.empty())
 	{
@@ -36,7 +36,7 @@ int Stack::Read()
 	}
 }
 
-vector<int> Stack::ReadAll()
+vector<int> Stack::readAll()
 {
 	cout << "The stack elements are: \n";
 	for (int i = stack.size() - 1; i >= 0; i--)

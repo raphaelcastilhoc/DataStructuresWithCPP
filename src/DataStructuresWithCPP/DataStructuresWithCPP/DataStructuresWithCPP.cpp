@@ -64,24 +64,24 @@ void RunSelection()
 
 void RunListing()
 {
-	/*cout << "Running Stack \n";
+	cout << "Running Stack \n";
 	Stack stack;
-	stack.Push(10);
-	stack.Push(5);
-	stack.Push(3);
-	stack.Push(7);
+	stack.push(10);
+	stack.push(5);
+	stack.push(3);
+	stack.push(7);
 
-	stack.Read();
-	stack.ReadAll();
+	stack.read();
+	stack.readAll();
 
-	stack.Pop();
-	stack.Read();
-	stack.ReadAll();
+	stack.pop();
+	stack.read();
+	stack.readAll();
 
-	stack.PopAll();*/
+	stack.popAll();
 
 
-	cout << "Running Queue \n";
+	/*cout << "Running Queue \n";
 	Queue queue;
 	queue.enqueue(10);
 	queue.enqueue(5);
@@ -95,7 +95,7 @@ void RunListing()
 	queue.read();
 	queue.readAll();
 
-	queue.dequeueAll();
+	queue.dequeueAll();*/
 
 
 	//cout << "Running Linked List \n";

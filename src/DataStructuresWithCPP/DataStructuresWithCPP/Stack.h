@@ -8,14 +8,14 @@ using namespace std;
 class Stack
 {
 public:
-	void Push(int number);
+	void push(int number);
 
-	void Pop();
+	void pop();
 
-	void PopAll();
+	void popAll();
 
-	int Read();
+	int read();
 
-	vector<int> ReadAll();
+	vector<int> readAll();
 };
 
