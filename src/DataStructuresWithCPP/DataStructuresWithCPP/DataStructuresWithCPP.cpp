@@ -54,9 +54,9 @@ void RunSelection()
 	vector<int> numbers{ 10, 5, 2, 1, 6, 3 };
 
 	cout << "Running Quick Select \n";
-	auto lowestValuePosition = 5;
+	auto lowestValuePosition = 4;
 	QuickSelect quickSelect;
-	auto result = quickSelect.SelectLowest(numbers, lowestValuePosition - 1);
+	auto result = quickSelect.selectLowest(numbers, lowestValuePosition - 1);
 	cout << "The " << lowestValuePosition << " lowest value is : " << result;
 }
 
@@ -168,9 +168,9 @@ void RunRecursion()
 
 int main()
 {
-	RunSorting();
+	//RunSorting();
 
-	//RunSelection();
+	RunSelection();
 
 	//RunListing();
 

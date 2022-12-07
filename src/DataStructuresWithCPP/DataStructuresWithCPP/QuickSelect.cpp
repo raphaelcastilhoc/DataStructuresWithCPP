@@ -1,27 +1,27 @@
 #include "QuickSelect.h"
 
-void QuickSelect::SwapPositions(int& firstElement, int& secondElement)
+void QuickSelect::swapPositions(int& firstElement, int& secondElement)
 {
 	auto tempNumber = firstElement;
 	firstElement = secondElement;
 	secondElement = tempNumber;
 }
 
-int QuickSelect::Partition(int leftIndex, int rightIndex)
+int QuickSelect::partition(int leftIndex, int rightIndex)
 {
 	auto pivotIndex = rightIndex;
-	auto pivotValue = Elements[pivotIndex];
+	auto pivotValue = elements[pivotIndex];
 
 	rightIndex -= 1;
 
 	while (true)
 	{
-		while (Elements[leftIndex] < pivotValue)
+		while (elements[leftIndex] < pivotValue)
 		{
 			leftIndex += 1;
 		}
 
-		while (Elements[rightIndex] > pivotValue)
+		while (elements[rightIndex] > pivotValue)
 		{
 			rightIndex -= 1;
 		}
@@ -31,41 +31,41 @@ int QuickSelect::Partition(int leftIndex, int rightIndex)
 			break;
 		}
 
-		SwapPositions(Elements[leftIndex], Elements[rightIndex]);
+		swapPositions(elements[leftIndex], elements[rightIndex]);
 
 		leftIndex += 1;
 	}
 
-	SwapPositions(Elements[leftIndex], Elements[pivotIndex]);
+	swapPositions(elements[leftIndex], elements[pivotIndex]);
 
 	return leftIndex;
 }
 
-int QuickSelect::RunSelectLowest(int position, int leftIndex, int rightIndex)
+int QuickSelect::runSelectLowest(int position, int leftIndex, int rightIndex)
 {
 	if (rightIndex - leftIndex <= 0)
 	{
-		return Elements[leftIndex];
+		return elements[leftIndex];
 	}
 
-	auto pivotIndex = Partition(leftIndex, rightIndex);
+	auto pivotIndex = partition(leftIndex, rightIndex);
 
 	if (position < pivotIndex)
 	{
-		RunSelectLowest(position, leftIndex, pivotIndex - 1);
+		runSelectLowest(position, leftIndex, pivotIndex - 1);
 	}
 	else if(position > pivotIndex)
 	{
-		RunSelectLowest(position, pivotIndex + 1, rightIndex);
+		runSelectLowest(position, pivotIndex + 1, rightIndex);
 	}
 
-	return Elements[position];
+	return elements[position];
 }
 
-int QuickSelect::SelectLowest(vector<int>& numbers, int position)
+int QuickSelect::selectLowest(vector<int>& numbers, int position)
 {
-	Elements = numbers;
-	auto result = RunSelectLowest(position, 0, numbers.size() - 1);
+	elements = numbers;
+	auto result = runSelectLowest(position, 0, numbers.size() - 1);
 
 	return result;
 }

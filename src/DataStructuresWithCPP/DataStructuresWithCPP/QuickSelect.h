@@ -7,14 +7,14 @@ using namespace std;
 class QuickSelect
 {
 private:
-	vector<int> Elements;
+	vector<int> elements;
 
-	void SwapPositions(int& firstElement, int& secondElement);
+	void swapPositions(int& firstElement, int& secondElement);
 
-	int Partition(int leftIndex, int rightIndex);
+	int partition(int leftIndex, int rightIndex);
 
-	int RunSelectLowest(int position, int leftIndex, int rightIndex);
+	int runSelectLowest(int position, int leftIndex, int rightIndex);
 
 public:
-	int SelectLowest(vector<int>& numbers, int position);
+	int selectLowest(vector<int>& numbers, int position);
 };
