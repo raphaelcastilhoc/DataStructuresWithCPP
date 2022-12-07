@@ -1,6 +1,6 @@
 #include "BubbleSort.h"
 
-void BubbleSort::Sort(vector<int>& numbers)
+void BubbleSort::sort(vector<int>& numbers)
 {
 	auto index = numbers.size() - 1;
 	auto isSorted = false;

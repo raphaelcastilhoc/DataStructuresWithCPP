@@ -7,6 +7,6 @@ using namespace std;
 class InsertionSort
 {
 public:
-	void Sort(vector<int>& numbers);
+	void sort(vector<int>& numbers);
 };
 

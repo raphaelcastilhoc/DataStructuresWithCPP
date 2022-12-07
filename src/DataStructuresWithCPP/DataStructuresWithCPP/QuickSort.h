@@ -7,6 +7,6 @@ using namespace std;
 class QuickSort
 {
 public:
-	vector<int> Sort(vector<int>& numbers);
+	vector<int> sort(vector<int>& numbers);
 };
 

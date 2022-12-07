@@ -18,7 +18,6 @@
 #include "Fibonacci.h"
 #include "DirectoryFinder.h"
 #include "MaxNumber.h"
-#include "Printer.h"
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -30,25 +29,24 @@ void RunSorting()
 
 	/*cout << "Running Bubble Sort \n";
 	BubbleSort bubbleSort;
-	bubbleSort.Sort(numbers);*/
+	bubbleSort.sort(numbers);*/
 
 	/*cout << "Running Selection Sort \n";
 	SelectionSort selectionSort;
-	selectionSort.Sort(numbers);*/
+	selectionSort.sort(numbers);*/
 
 	/*cout << "Running Insertion Sort \n";
 	InsertionSort insertionSort;
-	insertionSort.Sort(numbers);*/
-
-	/*Printer printer;
-	printer.Print(numbers);*/
+	insertionSort.sort(numbers);*/
 
 	cout << "Running Quick Sort \n";
 	QuickSort quickSort;
-	numbers = quickSort.Sort(numbers);
+	numbers = quickSort.sort(numbers);
 
-	Printer printer;
-	printer.Print(numbers);
+	for (int number : numbers)
+	{
+		cout << number << " ";
+	}
 }
 
 void RunSelection()
@@ -64,7 +62,7 @@ void RunSelection()
 
 void RunListing()
 {
-	cout << "Running Stack \n";
+	/*cout << "Running Stack \n";
 	Stack stack;
 	stack.push(10);
 	stack.push(5);
@@ -78,7 +76,7 @@ void RunListing()
 	stack.read();
 	stack.readAll();
 
-	stack.popAll();
+	stack.popAll();*/
 
 
 	/*cout << "Running Queue \n";
@@ -170,11 +168,11 @@ void RunRecursion()
 
 int main()
 {
-	//RunSorting();
+	RunSorting();
 
 	//RunSelection();
 
-	RunListing();
+	//RunListing();
 
 	//RunRecursion();
 }

@@ -1,6 +1,6 @@
 #include "InsertionSort.h"
 
-void InsertionSort::Sort(vector<int>& numbers)
+void InsertionSort::sort(vector<int>& numbers)
 {
 	for (auto i = 1; i < numbers.size(); i++)
 	{

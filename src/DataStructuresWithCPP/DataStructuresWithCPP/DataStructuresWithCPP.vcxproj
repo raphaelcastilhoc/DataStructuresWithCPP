@@ -137,7 +137,6 @@
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MaxNumber.cpp" />
-    <ClCompile Include="Printer.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="QuickSelect.cpp" />
     <ClCompile Include="QuickSort.cpp" />
@@ -153,7 +152,6 @@
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="MaxNumber.h" />
-    <ClInclude Include="Printer.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="QuickSelect.h" />
     <ClInclude Include="QuickSort.h" />

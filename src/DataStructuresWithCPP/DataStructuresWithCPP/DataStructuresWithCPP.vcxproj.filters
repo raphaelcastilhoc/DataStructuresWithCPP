@@ -45,9 +45,6 @@
     <ClCompile Include="BubbleSort.cpp">
       <Filter>Source Files\Sorting</Filter>
     </ClCompile>
-    <ClCompile Include="Printer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SelectionSort.cpp">
       <Filter>Source Files\Sorting</Filter>
     </ClCompile>
@@ -88,9 +85,6 @@
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
       <Filter>Header Files\Sorting</Filter>
-    </ClInclude>
-    <ClInclude Include="Printer.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SelectionSort.h">
       <Filter>Header Files\Sorting</Filter>

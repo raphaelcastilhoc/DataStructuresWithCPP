@@ -57,7 +57,7 @@ void RunQuickSort(int leftIndex, int rightIndex)
 	RunQuickSort(pivotIndex + 1, rightIndex);
 }
 
-vector<int> QuickSort::Sort(vector<int>& numbers)
+vector<int> QuickSort::sort(vector<int>& numbers)
 {
 	elements = numbers;
 	RunQuickSort(0, elements.size() - 1);

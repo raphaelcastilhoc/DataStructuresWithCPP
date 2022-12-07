@@ -7,6 +7,6 @@ using namespace std;
 class SelectionSort
 {
 public:
-	void Sort(vector<int>& numbers);
+	void sort(vector<int>& numbers);
 };
 
