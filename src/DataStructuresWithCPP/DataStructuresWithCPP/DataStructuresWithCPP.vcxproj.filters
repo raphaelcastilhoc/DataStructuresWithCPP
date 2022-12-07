@@ -78,9 +78,6 @@
     <ClCompile Include="QuickSelect.cpp">
       <Filter>Source Files\Selection</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedListNode.cpp">
-      <Filter>Source Files\Listing</Filter>
-    </ClCompile>
     <ClCompile Include="LinkedList.cpp">
       <Filter>Source Files\Listing</Filter>
     </ClCompile>

@@ -5,14 +5,13 @@
 
 using namespace std;
 
-struct Node
-{
-	int value;
-	shared_ptr<Node> nextNode;
-};
-
 class LinkedList
 {
+	struct Node
+	{
+		int value;
+		shared_ptr<Node> nextNode;
+	};
 
 private:
 	shared_ptr<Node> firstNode;

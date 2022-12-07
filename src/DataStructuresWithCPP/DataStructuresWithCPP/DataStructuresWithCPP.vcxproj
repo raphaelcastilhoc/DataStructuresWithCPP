@@ -135,7 +135,6 @@
     <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="LinkedListNode.cpp" />
     <ClCompile Include="MaxNumber.cpp" />
     <ClCompile Include="Printer.cpp" />
     <ClCompile Include="Queue.cpp" />
