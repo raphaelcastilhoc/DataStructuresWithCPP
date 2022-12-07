@@ -8,14 +8,14 @@ using namespace std;
 class Queue
 {
 public:
-	void Enqueue(int number);
+	void enqueue(int number);
 
-	void Dequeue();
+	void dequeue();
 
-	void DequeueAll();
+	void dequeueAll();
 
-	int Read();
+	int read();
 
-	vector<int> ReadAll();
+	vector<int> readAll();
 };
 

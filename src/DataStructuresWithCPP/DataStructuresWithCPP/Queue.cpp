@@ -2,13 +2,13 @@
 
 vector<int> queue;
 
-void Queue::Enqueue(int element)
+void Queue::enqueue(int element)
 {
 	queue.push_back(element);
 	cout << element << " enqueued \n";
 }
 
-void Queue::Dequeue()
+void Queue::dequeue()
 {
 	if (!queue.empty())
 	{
@@ -18,15 +18,15 @@ void Queue::Dequeue()
 	}
 }
 
-void Queue::DequeueAll()
+void Queue::dequeueAll()
 {
 	while (!queue.empty())
 	{
-		Dequeue();
+		dequeue();
 	}
 }
 
-int Queue::Read()
+int Queue::read()
 {
 	if (!queue.empty())
 	{
@@ -36,7 +36,7 @@ int Queue::Read()
 	}
 }
 
-vector<int> Queue::ReadAll()
+vector<int> Queue::readAll()
 {
 	cout << "The queue elements are: \n";
 	for (auto number : queue)

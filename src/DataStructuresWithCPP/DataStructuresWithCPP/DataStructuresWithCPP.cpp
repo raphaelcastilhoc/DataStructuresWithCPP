@@ -81,21 +81,21 @@ void RunListing()
 	stack.PopAll();*/
 
 
-	//cout << "Running Queue \n";
-	//Queue queue;
-	//queue.Enqueue(10);
-	//queue.Enqueue(5);
-	//queue.Enqueue(3);
-	//queue.Enqueue(7);
+	cout << "Running Queue \n";
+	Queue queue;
+	queue.enqueue(10);
+	queue.enqueue(5);
+	queue.enqueue(3);
+	queue.enqueue(7);
 
-	//queue.Read();
-	//queue.ReadAll();
+	queue.read();
+	queue.readAll();
 
-	//queue.Dequeue();
-	//queue.Read();
-	//queue.ReadAll();
+	queue.dequeue();
+	queue.read();
+	queue.readAll();
 
-	//queue.DequeueAll();
+	queue.dequeueAll();
 
 
 	//cout << "Running Linked List \n";
@@ -118,33 +118,33 @@ void RunListing()
 	//linkedList.readAll();
 
 
-	cout << "Running Doubly Linked List \n";
-	DoublyLinkedList doublyLinkedList;
-	doublyLinkedList.push(10);
-	doublyLinkedList.push(5);
-	doublyLinkedList.push(3);
-	doublyLinkedList.push(7);
+	//cout << "Running Doubly Linked List \n";
+	//DoublyLinkedList doublyLinkedList;
+	//doublyLinkedList.push(10);
+	//doublyLinkedList.push(5);
+	//doublyLinkedList.push(3);
+	//doublyLinkedList.push(7);
 
-	//doublyLinkedList.read(1);
-	doublyLinkedList.readAll();
+	////doublyLinkedList.read(1);
+	//doublyLinkedList.readAll();
 
-	//doublyLinkedList.push(9, make_shared<int>(10));
-	//doublyLinkedList.push(9, make_shared<int>(0));
-	//doublyLinkedList.push(9, make_shared<int>(2));
+	////doublyLinkedList.push(9, make_shared<int>(10));
+	////doublyLinkedList.push(9, make_shared<int>(0));
+	////doublyLinkedList.push(9, make_shared<int>(2));
 
-	/*doublyLinkedList.read(2);
-	doublyLinkedList.readAll();*/
+	///*doublyLinkedList.read(2);
+	//doublyLinkedList.readAll();*/
 
-	doublyLinkedList.remove(make_shared<int>(2));
-	doublyLinkedList.remove(make_shared<int>(0));
+	//doublyLinkedList.remove(make_shared<int>(2));
+	//doublyLinkedList.remove(make_shared<int>(0));
 
-	doublyLinkedList.readAll();
+	//doublyLinkedList.readAll();
 
-	doublyLinkedList.push(4);
-	doublyLinkedList.push(8);
-	doublyLinkedList.push(0, make_shared<int>(0));
+	//doublyLinkedList.push(4);
+	//doublyLinkedList.push(8);
+	//doublyLinkedList.push(0, make_shared<int>(0));
 
-	doublyLinkedList.readAll();
+	//doublyLinkedList.readAll();
 }
 
 void RunRecursion()
