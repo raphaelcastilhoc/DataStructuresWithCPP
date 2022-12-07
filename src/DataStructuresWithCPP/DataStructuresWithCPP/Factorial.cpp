@@ -1,11 +1,11 @@
 #include "Factorial.h"
 
-long Factorial::Run(int number) 
+long Factorial::run(int number) 
 {
 	if (number <= 1)
 	{
 		return number;
 	}
 
-	return number * Run(number - 1);
+	return number * run(number - 1);
 }

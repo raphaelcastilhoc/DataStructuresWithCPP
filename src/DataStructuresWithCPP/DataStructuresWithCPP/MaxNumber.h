@@ -7,6 +7,6 @@ using namespace std;
 class MaxNumber
 {
 public:
-	long Run(vector<int> numbers);
+	long run(vector<int> numbers);
 };
 

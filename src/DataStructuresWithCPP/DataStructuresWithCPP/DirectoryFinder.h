@@ -11,6 +11,6 @@ namespace fs = std::filesystem;
 class DirectoryFinder
 {
 public:
-	void FindSubdirectories(string directoryPath);
+	void findSubdirectories(string directoryPath);
 };
 

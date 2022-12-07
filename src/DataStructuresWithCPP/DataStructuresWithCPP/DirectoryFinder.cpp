@@ -1,6 +1,6 @@
 #include "DirectoryFinder.h"
 
-void DirectoryFinder::FindSubdirectories(string directoryPath)
+void DirectoryFinder::findSubdirectories(string directoryPath)
 {
 	if (fs::is_directory(directoryPath))
 	{
@@ -8,7 +8,7 @@ void DirectoryFinder::FindSubdirectories(string directoryPath)
 		
 		for (const auto& entry : fs::directory_iterator(directoryPath))
 		{
-			FindSubdirectories(entry.path().string());
+			findSubdirectories(entry.path().string());
 		}
 	}
 }

@@ -3,6 +3,6 @@
 class Fibonacci
 {
 public:
-	long Run(long number);
+	long run(long number);
 };
 

@@ -2,5 +2,5 @@
 class Factorial
 {
 public:
-	long Run(int number);
+	long run(int number);
 };

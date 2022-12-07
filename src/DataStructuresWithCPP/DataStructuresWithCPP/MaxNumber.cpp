@@ -1,6 +1,6 @@
 #include "MaxNumber.h"
 
-long MaxNumber::Run(vector<int> numbers)
+long MaxNumber::run(vector<int> numbers)
 {
     if (numbers.size() == 1)
     {
@@ -8,7 +8,7 @@ long MaxNumber::Run(vector<int> numbers)
     }
 
     vector<int> new_numbers(numbers.begin() + 1, numbers.end());
-    auto maxNumber = Run(new_numbers);
+    auto maxNumber = run(new_numbers);
 
     if (numbers.front() > maxNumber)
     {

@@ -149,20 +149,19 @@ void RunRecursion()
 {
 	/*auto number = 5;
 	Factorial factorial;
-	long factorialResult = factorial.Run(number);
+	long factorialResult = factorial.run(number);
 	cout << "Factorial of " << number << " is: " << factorialResult;*/
-
 
 	/*auto number = 9;
 	Fibonacci fibonacci;
-	long fibonacciResult = fibonacci.Run(number);
+	long fibonacciResult = fibonacci.run(number);
 	cout << "Fibonacci of " << number << " is: " << fibonacciResult;*/
 
 	/*DirectoryFinder directoryFinder;
-	directoryFinder.FindSubdirectories(fs::current_path().string());*/
+	directoryFinder.findSubdirectories(fs::current_path().string());*/
 
 	MaxNumber maxNumber;
-	auto result = maxNumber.Run(vector<int>{2, 8, 10, 4, 5});
+	auto result = maxNumber.run(vector<int>{2, 8, 10, 4, 5});
 	cout << "Max number is: " << result;
 }
 
@@ -170,9 +169,9 @@ int main()
 {
 	//RunSorting();
 
-	RunSelection();
+	//RunSelection();
 
 	//RunListing();
 
-	//RunRecursion();
+	RunRecursion();
 }
