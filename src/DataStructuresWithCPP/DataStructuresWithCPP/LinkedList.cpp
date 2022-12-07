@@ -87,6 +87,12 @@ void LinkedList::pushAtIndex(int value, shared_ptr<int> index)
 		currentIndex += 1;
 	}
 
+	if (currentNode == nullptr || currentNode->nextNode == nullptr)
+	{
+		pushAtEnd(value);
+		return;
+	}
+
 	shared_ptr<Node> newNode(new Node{ value, currentNode->nextNode });
 	currentNode->nextNode = newNode;
 }

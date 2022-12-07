@@ -131,6 +131,7 @@
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="DataStructuresWithCPP.cpp" />
     <ClCompile Include="DirectoryFinder.cpp" />
+    <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="Factorial.cpp" />
     <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="DirectoryFinder.h" />
+    <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Factorial.h" />
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="InsertionSort.h" />

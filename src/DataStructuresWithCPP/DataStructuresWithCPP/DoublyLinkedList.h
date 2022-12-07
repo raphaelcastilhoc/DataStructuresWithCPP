@@ -5,20 +5,27 @@
 
 using namespace std;
 
-class LinkedList
+class DoublyLinkedList
 {
 	struct Node
 	{
 		int value;
+		shared_ptr<Node> previousNode;
 		shared_ptr<Node> nextNode;
 	};
 
 private:
 	shared_ptr<Node> firstNode;
 
+	shared_ptr<Node> lastNode;
+
 	void pushAtEnd(int value);
 
 	void pushAtIndex(int value, shared_ptr<int> index);
+
+	void removeAtEnd();
+
+	void removeAtIndex(shared_ptr<int> index);
 
 public:
 	int* read(int index);
@@ -27,5 +34,7 @@ public:
 
 	void push(int value, shared_ptr<int> index = nullptr);
 
-	void remove(int index);
+	void remove(shared_ptr<int> index = nullptr);
 };
+
+
