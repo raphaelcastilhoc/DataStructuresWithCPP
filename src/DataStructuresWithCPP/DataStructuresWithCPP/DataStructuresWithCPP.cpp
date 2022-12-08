@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <filesystem>
+#include <string> 
 
 #include "BubbleSort.h"
 #include "SelectionSort.h"
@@ -18,6 +19,7 @@
 #include "Fibonacci.h"
 #include "DirectoryFinder.h"
 #include "MaxNumber.h"
+#include "BinarySearchTree.h"
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -165,6 +167,40 @@ void RunRecursion()
 	cout << "Max number is: " << result;
 }
 
+void RunTree()
+{
+	BinarySearchTree binarySearchTree;
+	binarySearchTree.insert(5);
+	binarySearchTree.insert(10);
+	binarySearchTree.insert(15);
+	binarySearchTree.insert(4);
+	binarySearchTree.insert(3);
+	binarySearchTree.insert(8);
+	binarySearchTree.insert(20);
+	binarySearchTree.insert(25);
+	binarySearchTree.insert(14);
+	binarySearchTree.insert(12);
+	binarySearchTree.insert(17);
+	binarySearchTree.insert(18);
+
+	auto node = binarySearchTree.search(17);
+	cout << "The searched node is: " << node->value << "\n";
+	cout << (node->leftChild != nullptr ? "Its left child is: " + to_string(node->leftChild->value) : "No left child") << "\n";
+	cout << (node->rightChild != nullptr ? "Its right child is: " + to_string(node->rightChild->value) : "No right child") << "\n";
+
+	binarySearchTree.remove(15);
+	/*cout << "The searched node is: " << node->value << "\n";
+	cout << (node->leftChild != nullptr ? "Its left child is: " + to_string(node->leftChild->value) : "No left child") << "\n";
+	cout << (node->rightChild != nullptr ? "Its right child is: " + to_string(node->rightChild->value) : "No right child") << "\n";*/
+
+
+
+	auto node2 = binarySearchTree.search(20);
+	cout << "The searched node is: " << node2->value << "\n";
+	cout << (node2->leftChild != nullptr ? "Its left child is: " + to_string(node2->leftChild->value) : "No left child") << "\n";
+	cout << (node2->rightChild != nullptr ? "Its right child is: " + to_string(node2->rightChild->value) : "No right child") << "\n";
+}
+
 int main()
 {
 	//RunSorting();
@@ -173,5 +209,7 @@ int main()
 
 	//RunListing();
 
-	RunRecursion();
+	//RunRecursion();
+
+	RunTree();
 }

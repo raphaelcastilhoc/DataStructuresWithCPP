@@ -37,6 +37,12 @@
     <Filter Include="Header Files\Selection">
       <UniqueIdentifier>{29cd24e6-6f33-427a-a0d1-5bac4b2e8733}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Trees">
+      <UniqueIdentifier>{617fd317-083d-4bc8-a785-f83af984b418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Trees">
+      <UniqueIdentifier>{ebe01eaf-22d7-4bfe-b2c0-9d7e11d1702a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructuresWithCPP.cpp">
@@ -81,6 +87,9 @@
     <ClCompile Include="DoublyLinkedList.cpp">
       <Filter>Source Files\Listing</Filter>
     </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -121,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="DoublyLinkedList.h">
       <Filter>Header Files\Listing</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
+      <Filter>Header Files\Trees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
