@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -22,15 +23,19 @@ public:
 
 	void remove(int value);
 
+	void readAll();
+
 private:
 	shared_ptr<Node> root;
 
-	shared_ptr<Node> searchNode(int searchValue, shared_ptr<Node> node);
+	shared_ptr<Node> search(int searchValue, shared_ptr<Node> node);
 
-	void insertNode(int value, shared_ptr<Node> node);
+	void insert(int value, shared_ptr<Node> node);
 
-	shared_ptr<Node> removeNode(int value, shared_ptr<Node> node);
+	shared_ptr<Node> remove(int value, shared_ptr<Node> node);
 
-	shared_ptr<Node> liftNode(shared_ptr<Node> node, shared_ptr<Node> nodeTodelete);
+	shared_ptr<Node> lift(shared_ptr<Node> node, shared_ptr<Node> nodeTodelete);
+
+	void readAll(shared_ptr<Node> node);
 };
 

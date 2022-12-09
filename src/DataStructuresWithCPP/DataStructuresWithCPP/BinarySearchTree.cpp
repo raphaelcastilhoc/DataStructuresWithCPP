@@ -1,6 +1,6 @@
 #include "BinarySearchTree.h"
 
-shared_ptr<BinarySearchTree::Node> BinarySearchTree::searchNode(int searchValue, shared_ptr<BinarySearchTree::Node> node)
+shared_ptr<BinarySearchTree::Node> BinarySearchTree::search(int searchValue, shared_ptr<BinarySearchTree::Node> node)
 {
 	if (!node || node->value == searchValue)
 	{
@@ -9,21 +9,26 @@ shared_ptr<BinarySearchTree::Node> BinarySearchTree::searchNode(int searchValue,
 
 	if (searchValue > node->value)
 	{
-		return searchNode(searchValue, node->rightChild);
+		return search(searchValue, node->rightChild);
 	}
 	else
 	{
-		return searchNode(searchValue, node->leftChild);
+		return search(searchValue, node->leftChild);
 	}
 }
 
 shared_ptr<BinarySearchTree::Node> BinarySearchTree::search(int searchValue)
 {
-	auto node = searchNode(searchValue, root);
+	auto node = search(searchValue, root);
+
+	cout << (node ? "The searched node is: " + to_string(node->value) : "Node not found") << "\n";
+	cout << (node && node->leftChild ? "Its left child is: " + to_string(node->leftChild->value) : "No left child") << "\n";
+	cout << (node && node->rightChild ? "Its right child is: " + to_string(node->rightChild->value) : "No right child") << "\n";
+
 	return node;
 }
 
-void BinarySearchTree::insertNode(int value, shared_ptr<Node> node)
+void BinarySearchTree::insert(int value, shared_ptr<Node> node)
 {
 	if (value > node->value)
 	{
@@ -33,7 +38,7 @@ void BinarySearchTree::insertNode(int value, shared_ptr<Node> node)
 		}
 		else
 		{
-			insertNode(value, node->rightChild);
+			insert(value, node->rightChild);
 		}
 	}
 	else
@@ -44,7 +49,7 @@ void BinarySearchTree::insertNode(int value, shared_ptr<Node> node)
 		}
 		else
 		{
-			insertNode(value, node->leftChild);
+			insert(value, node->leftChild);
 		}
 	}
 }
@@ -57,10 +62,10 @@ void BinarySearchTree::insert(int value)
 		return;
 	}
 
-	insertNode(value, root);
+	insert(value, root);
 }
 
-shared_ptr<BinarySearchTree::Node> BinarySearchTree::removeNode(int value, shared_ptr<Node> node)
+shared_ptr<BinarySearchTree::Node> BinarySearchTree::remove(int value, shared_ptr<Node> node)
 {
 	if (!node)
 	{
@@ -69,12 +74,12 @@ shared_ptr<BinarySearchTree::Node> BinarySearchTree::removeNode(int value, share
 
 	if (value > node->value)
 	{
-		node->rightChild = removeNode(value, node->rightChild);
+		node->rightChild = remove(value, node->rightChild);
 		return node;
 	}
 	else if (value < node->value)
 	{
-		node->leftChild = removeNode(value, node->leftChild);
+		node->leftChild = remove(value, node->leftChild);
 		return node;
 	}
 	else if (value == node->value)
@@ -88,16 +93,16 @@ shared_ptr<BinarySearchTree::Node> BinarySearchTree::removeNode(int value, share
 			return node->leftChild;
 		}
 
-		node->rightChild = liftNode(node->rightChild, node);
+		node->rightChild = lift(node->rightChild, node);
 		return node;
 	}
 }
 
-shared_ptr<BinarySearchTree::Node> BinarySearchTree::liftNode(shared_ptr<Node> node, shared_ptr<Node> nodeToDelete)
+shared_ptr<BinarySearchTree::Node> BinarySearchTree::lift(shared_ptr<Node> node, shared_ptr<Node> nodeToDelete)
 {
 	if (node->leftChild)
 	{
-		node->leftChild = liftNode(node->leftChild, nodeToDelete);
+		node->leftChild = lift(node->leftChild, nodeToDelete);
 		return node;
 	}
 
@@ -107,5 +112,23 @@ shared_ptr<BinarySearchTree::Node> BinarySearchTree::liftNode(shared_ptr<Node> n
 
 void BinarySearchTree::remove(int value)
 {
-	removeNode(value, root);
+	remove(value, root);
+}
+
+void BinarySearchTree::readAll()
+{
+	readAll(root);
+}
+
+void BinarySearchTree::readAll(shared_ptr<Node> node)
+{
+	if (!node)
+	{
+		return;
+	}
+
+	cout << to_string(node->value) << "\n";
+
+	readAll(node->leftChild);
+	readAll(node->rightChild);
 }
