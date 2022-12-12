@@ -1,7 +1,5 @@
 #include "Queue.h"
 
-vector<int> queue;
-
 void Queue::enqueue(int element)
 {
 	queue.push_back(element);

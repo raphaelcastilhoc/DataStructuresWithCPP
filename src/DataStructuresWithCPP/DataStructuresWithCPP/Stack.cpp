@@ -1,7 +1,5 @@
 #include "Stack.h"
 
-vector<int> stack;
-
 void Stack::push(int element)
 {
 	stack.push_back(element);

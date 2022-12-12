@@ -20,6 +20,7 @@
 #include "DirectoryFinder.h"
 #include "MaxNumber.h"
 #include "BinarySearchTree.h"
+#include "Heap.h"
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -64,7 +65,7 @@ void RunSelection()
 
 void RunListing()
 {
-	/*cout << "Running Stack \n";
+	cout << "Running Stack \n";
 	Stack stack;
 	stack.push(10);
 	stack.push(5);
@@ -78,7 +79,7 @@ void RunListing()
 	stack.read();
 	stack.readAll();
 
-	stack.popAll();*/
+	stack.popAll();
 
 
 	/*cout << "Running Queue \n";
@@ -169,7 +170,7 @@ void RunRecursion()
 
 void RunTree()
 {
-	BinarySearchTree binarySearchTree;
+	/*BinarySearchTree binarySearchTree;
 	binarySearchTree.insert(5);
 	binarySearchTree.insert(10);
 	binarySearchTree.insert(15);
@@ -189,7 +190,22 @@ void RunTree()
 
 	binarySearchTree.remove(15);
 
-	binarySearchTree.readAll();
+	binarySearchTree.readAll();*/
+
+
+	Heap heap;
+	heap.insert(100);
+	heap.insert(90);
+	heap.insert(80);
+	heap.insert(70);
+	heap.insert(60);
+	heap.insert(110);
+	heap.insert(40);
+	heap.insert(30);
+	heap.insert(20);
+	heap.insert(10);
+
+	heap.remove();
 }
 
 int main()

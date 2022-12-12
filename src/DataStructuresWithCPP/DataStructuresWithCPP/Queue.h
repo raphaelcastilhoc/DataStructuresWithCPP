@@ -7,6 +7,9 @@ using namespace std;
 
 class Queue
 {
+private:
+	vector<int> queue;
+
 public:
 	void enqueue(int number);
 

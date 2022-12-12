@@ -2,14 +2,14 @@
 
 vector<int> elements;
 
-void SwapPositions(int& firstElement, int& secondElement)
+void QuickSort::swapPositions(int& firstElement, int& secondElement)
 {
 	auto tempNumber = firstElement;
 	firstElement = secondElement;
 	secondElement = tempNumber;
 }
 
-int Partition(int leftIndex, int rightIndex)
+int QuickSort::partition(int leftIndex, int rightIndex)
 {
 	auto pivotIndex = rightIndex;
 	auto pivotValue = elements[pivotIndex];
@@ -33,34 +33,34 @@ int Partition(int leftIndex, int rightIndex)
 			break;
 		}
 
-		SwapPositions(elements[leftIndex], elements[rightIndex]);
+		swapPositions(elements[leftIndex], elements[rightIndex]);
 
 		leftIndex += 1;
 	}
 
-	SwapPositions(elements[leftIndex], elements[pivotIndex]);
+	swapPositions(elements[leftIndex], elements[pivotIndex]);
 
 	return leftIndex;
 }
 
-void RunQuickSort(int leftIndex, int rightIndex)
+void QuickSort::runQuickSort(int leftIndex, int rightIndex)
 {
 	if (rightIndex - leftIndex <= 0)
 	{
 		return;
 	}
 
-	auto pivotIndex = Partition(leftIndex, rightIndex);
+	auto pivotIndex = partition(leftIndex, rightIndex);
 
-	RunQuickSort(leftIndex, pivotIndex - 1);
+	runQuickSort(leftIndex, pivotIndex - 1);
 
-	RunQuickSort(pivotIndex + 1, rightIndex);
+	runQuickSort(pivotIndex + 1, rightIndex);
 }
 
 vector<int> QuickSort::sort(vector<int>& numbers)
 {
 	elements = numbers;
-	RunQuickSort(0, elements.size() - 1);
+	runQuickSort(0, elements.size() - 1);
 
 	return elements;
 }

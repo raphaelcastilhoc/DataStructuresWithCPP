@@ -90,6 +90,9 @@
     <ClCompile Include="BinarySearchTree.cpp">
       <Filter>Source Files\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -132,6 +135,9 @@
       <Filter>Header Files\Listing</Filter>
     </ClInclude>
     <ClInclude Include="BinarySearchTree.h">
+      <Filter>Header Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
       <Filter>Header Files\Trees</Filter>
     </ClInclude>
   </ItemGroup>

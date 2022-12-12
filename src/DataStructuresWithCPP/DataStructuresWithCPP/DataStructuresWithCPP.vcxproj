@@ -135,6 +135,7 @@
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="Factorial.cpp" />
     <ClCompile Include="Fibonacci.cpp" />
+    <ClCompile Include="Heap.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MaxNumber.cpp" />
@@ -151,6 +152,7 @@
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Factorial.h" />
     <ClInclude Include="Fibonacci.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="MaxNumber.h" />

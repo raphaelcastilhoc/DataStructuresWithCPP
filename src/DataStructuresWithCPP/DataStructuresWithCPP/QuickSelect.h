@@ -6,6 +6,9 @@ using namespace std;
 
 class QuickSelect
 {
+public:
+	int selectLowest(vector<int>& numbers, int position);
+
 private:
 	vector<int> elements;
 
@@ -14,7 +17,4 @@ private:
 	int partition(int leftIndex, int rightIndex);
 
 	int runSelectLowest(int position, int leftIndex, int rightIndex);
-
-public:
-	int selectLowest(vector<int>& numbers, int position);
 };

@@ -7,6 +7,9 @@ using namespace std;
 
 class Stack
 {
+private:
+	vector<int> stack;
+
 public:
 	void push(int number);
 
