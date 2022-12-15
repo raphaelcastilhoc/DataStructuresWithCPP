@@ -21,6 +21,7 @@
 #include "MaxNumber.h"
 #include "BinarySearchTree.h"
 #include "Heap.h"
+#include "Trie.h"
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -193,7 +194,7 @@ void RunTree()
 	binarySearchTree.readAll();*/
 
 
-	Heap heap;
+	/*Heap heap;
 	heap.insert(100);
 	heap.insert(90);
 	heap.insert(80);
@@ -205,7 +206,44 @@ void RunTree()
 	heap.insert(20);
 	heap.insert(10);
 
-	heap.remove();
+	heap.remove();*/
+
+
+	Trie trie;
+	trie.insert("act");
+	trie.insert("cat");
+	trie.insert("can");
+	trie.insert("actor");
+	trie.insert("zoo");
+	trie.insert("zombie");
+	trie.insert("zoom");
+	trie.insert("zone");
+
+	while (cin)
+	{
+		cout << "Type a word: ";
+
+		string word;
+		cin >> word;
+
+		if (word == "-1")
+		{
+			break;
+		}
+
+		auto wordExists = trie.checkIfWordExists(word);
+		cout << "The word exists? " << (wordExists ? "Yes" : "No") << "\n\n";
+
+		auto words = trie.autocomplete(word);
+
+		cout << "The auto completed words are:\n";
+		for (auto word : words)
+		{
+			cout << word << "\n";
+		}
+
+		cout << "\n";
+	}
 }
 
 int main()

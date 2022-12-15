@@ -93,6 +93,9 @@
     <ClCompile Include="Heap.cpp">
       <Filter>Source Files\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="Trie.cpp">
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -138,6 +141,9 @@
       <Filter>Header Files\Trees</Filter>
     </ClInclude>
     <ClInclude Include="Heap.h">
+      <Filter>Header Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Trie.h">
       <Filter>Header Files\Trees</Filter>
     </ClInclude>
   </ItemGroup>
