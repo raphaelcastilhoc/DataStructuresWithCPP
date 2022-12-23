@@ -1,7 +1,5 @@
 #include "QuickSort.h"
 
-vector<int> elements;
-
 void QuickSort::swapPositions(int& firstElement, int& secondElement)
 {
 	auto tempNumber = firstElement;
@@ -57,7 +55,7 @@ void QuickSort::runQuickSort(int leftIndex, int rightIndex)
 	runQuickSort(pivotIndex + 1, rightIndex);
 }
 
-vector<int> QuickSort::sort(vector<int>& numbers)
+std::vector<int> QuickSort::sort(std::vector<int>& numbers)
 {
 	elements = numbers;
 	runQuickSort(0, elements.size() - 1);

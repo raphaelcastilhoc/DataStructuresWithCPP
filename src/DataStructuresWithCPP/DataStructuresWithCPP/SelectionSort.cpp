@@ -1,6 +1,6 @@
 #include "SelectionSort.h"
 
-void SelectionSort::sort(vector<int>& numbers)
+void SelectionSort::sort(std::vector<int>& numbers)
 {
 	for (auto i = 0; i < numbers.size(); i++)
 	{

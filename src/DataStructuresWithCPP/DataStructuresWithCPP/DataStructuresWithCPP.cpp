@@ -1,6 +1,3 @@
-// DataStructuresWithCPP.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <vector>
 #include <filesystem>
@@ -27,10 +24,10 @@ namespace fs = std::filesystem;
 
 void RunSorting()
 {
-	//vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
-	vector<int> numbers{ 0, 5, 2, 1, 6, 3 };
+	vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
+	//vector<int> numbers{ 0, 5, 2, 1, 6, 3 };
 
-	/*cout << "Running Bubble Sort \n";
+	/*std::cout << "Running Bubble Sort \n";
 	BubbleSort bubbleSort;
 	bubbleSort.sort(numbers);*/
 
@@ -38,17 +35,17 @@ void RunSorting()
 	SelectionSort selectionSort;
 	selectionSort.sort(numbers);*/
 
-	/*cout << "Running Insertion Sort \n";
+	cout << "Running Insertion Sort \n";
 	InsertionSort insertionSort;
-	insertionSort.sort(numbers);*/
+	insertionSort.sort(numbers);
 
-	cout << "Running Quick Sort \n";
+	/*std::cout << "Running Quick Sort \n";
 	QuickSort quickSort;
-	numbers = quickSort.sort(numbers);
+	numbers = quickSort.sort(numbers);*/
 
 	for (int number : numbers)
 	{
-		cout << number << " ";
+		std::cout << number << " ";
 	}
 }
 
@@ -247,11 +244,11 @@ void RunTree()
 
 int main()
 {
-	//RunSorting();
+	RunSorting();
 
 	//RunSelection();
 
-	RunListing();
+	//RunListing();
 
 	//RunRecursion();
 

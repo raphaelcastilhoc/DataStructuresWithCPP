@@ -2,11 +2,9 @@
 
 #include <vector>
 
-using namespace std;
-
 class SelectionSort
 {
 public:
-	void sort(vector<int>& numbers);
+	void sort(std::vector<int>& numbers);
 };
 

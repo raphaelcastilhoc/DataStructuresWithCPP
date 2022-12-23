@@ -2,14 +2,14 @@
 
 #include <vector>
 
-using namespace std;
-
 class QuickSort
 {
 public:
-	vector<int> sort(vector<int>& numbers);
+	std::vector<int> sort(std::vector<int>& numbers);
 
 private:
+	std::vector<int> elements;
+
 	void swapPositions(int& firstElement, int& secondElement);
 
 	int partition(int leftIndex, int rightIndex);
