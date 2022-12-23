@@ -11,23 +11,23 @@ int* LinkedList::read(int index)
 		currentIndex += 1;
 	}
 
-	cout << "The element on linked list index " << index << " is: " << currentNode->value << "\n";
+	std::cout << "The element on linked list index " << index << " is: " << currentNode->value << "\n";
 
 	return &currentNode->value;
 }
 
-vector<int> LinkedList::readAll()
+std::vector<int> LinkedList::readAll()
 {
-	vector<int> nodeValues;
+	std::vector<int> nodeValues;
 
 	auto currentNode = firstNode;
 	nodeValues.push_back(firstNode->value);
 
-	cout << "The linked list elements are: \n";
+	std::cout << "The linked list elements are: \n";
 	while (currentNode)
 	{
 		nodeValues.push_back(currentNode->value);
-		cout << currentNode->value << "\n";
+		std::cout << currentNode->value << "\n";
 
 		currentNode = currentNode->nextNode;
 	}
@@ -35,11 +35,11 @@ vector<int> LinkedList::readAll()
 	return nodeValues;
 }
 
-void LinkedList::push(int value, shared_ptr<int> index)
+void LinkedList::push(int value, std::shared_ptr<int> index)
 {
 	if (firstNode == nullptr)
 	{
-		shared_ptr<Node>newNode(new Node{ value, nullptr });
+		std::shared_ptr<Node>newNode(new Node{ value, nullptr });
 		firstNode = newNode;
 		return;
 	}
@@ -61,15 +61,15 @@ void LinkedList::pushAtEnd(int value)
 		currentNode = currentNode->nextNode;
 	}
 
-	shared_ptr<Node> newNode(new Node{ value, nullptr });
+	std::shared_ptr<Node> newNode(new Node{ value, nullptr });
 	currentNode->nextNode = newNode;
 }
 
-void LinkedList::pushAtIndex(int value, shared_ptr<int> index)
+void LinkedList::pushAtIndex(int value, std::shared_ptr<int> index)
 {
 	if (*index == 0)
 	{
-		shared_ptr<Node>newNode(new Node{ value, firstNode });
+		std::shared_ptr<Node>newNode(new Node{ value, firstNode });
 		firstNode = newNode;
 		return;
 	}
@@ -93,7 +93,7 @@ void LinkedList::pushAtIndex(int value, shared_ptr<int> index)
 		return;
 	}
 
-	shared_ptr<Node> newNode(new Node{ value, currentNode->nextNode });
+	std::shared_ptr<Node> newNode(new Node{ value, currentNode->nextNode });
 	currentNode->nextNode = newNode;
 }
 
