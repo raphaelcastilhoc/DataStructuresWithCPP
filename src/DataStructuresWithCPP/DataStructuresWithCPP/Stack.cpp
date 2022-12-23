@@ -1,6 +1,6 @@
-#include "Stack.h"
-
 #include <iostream>
+
+#include "Stack.h"
 
 void Stack::push(int element)
 {

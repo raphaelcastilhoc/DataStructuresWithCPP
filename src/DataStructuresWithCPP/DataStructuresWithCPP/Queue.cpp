@@ -1,6 +1,6 @@
-#include "Queue.h"
-
 #include <iostream>
+
+#include "Queue.h"
 
 void Queue::enqueue(int element)
 {

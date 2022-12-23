@@ -1,6 +1,6 @@
-#include "BinarySearchTree.h"
-
 #include <string>
+
+#include "BinarySearchTree.h"
 
 std::shared_ptr<BinarySearchTree::Node> BinarySearchTree::search(int searchValue, std::shared_ptr<BinarySearchTree::Node> node)
 {
