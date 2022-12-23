@@ -22,18 +22,18 @@
 
 void RunSorting()
 {
-	vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
-	//vector<int> numbers{ 0, 5, 2, 1, 6, 3 };
+	std::vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
+	//std::vector<int> numbers{ 0, 5, 2, 1, 6, 3 };
 
 	/*std::cout << "Running Bubble Sort \n";
 	BubbleSort bubbleSort;
 	bubbleSort.sort(numbers);*/
 
-	/*cout << "Running Selection Sort \n";
+	/*std::cout << "Running Selection Sort \n";
 	SelectionSort selectionSort;
 	selectionSort.sort(numbers);*/
 
-	cout << "Running Insertion Sort \n";
+	std::cout << "Running Insertion Sort \n";
 	InsertionSort insertionSort;
 	insertionSort.sort(numbers);
 
@@ -49,13 +49,13 @@ void RunSorting()
 
 void RunSelection()
 {
-	vector<int> numbers{ 10, 5, 2, 1, 6, 3 };
+	std::vector<int> numbers{ 10, 5, 2, 1, 6, 3 };
 
-	cout << "Running Quick Select \n";
+	std::cout << "Running Quick Select \n";
 	auto lowestValuePosition = 4;
 	QuickSelect quickSelect;
 	auto result = quickSelect.selectLowest(numbers, lowestValuePosition - 1);
-	cout << "The " << lowestValuePosition << " lowest value is : " << result;
+	std::cout << "The " << lowestValuePosition << " lowest value is : " << result;
 }
 
 void RunListing()
@@ -148,24 +148,24 @@ void RunRecursion()
 	/*auto number = 5;
 	Factorial factorial;
 	long factorialResult = factorial.run(number);
-	cout << "Factorial of " << number << " is: " << factorialResult;*/
+	std::cout << "Factorial of " << number << " is: " << factorialResult;*/
 
 	/*auto number = 9;
 	Fibonacci fibonacci;
 	long fibonacciResult = fibonacci.run(number);
-	cout << "Fibonacci of " << number << " is: " << fibonacciResult;*/
+	std::cout << "Fibonacci of " << number << " is: " << fibonacciResult;*/
 
 	/*DirectoryFinder directoryFinder;
 	directoryFinder.findSubdirectories(std::filesystem::current_path().string());*/
 
 	/*MaxNumber maxNumber;
 	auto result = maxNumber.run(vector<int>{2, 8, 10, 4, 5});
-	cout << "Max number is: " << result;*/
+	std::cout << "Max number is: " << result;*/
 }
 
 void RunTree()
 {
-	/*BinarySearchTree binarySearchTree;
+	BinarySearchTree binarySearchTree;
 	binarySearchTree.insert(5);
 	binarySearchTree.insert(10);
 	binarySearchTree.insert(15);
@@ -185,7 +185,7 @@ void RunTree()
 
 	binarySearchTree.remove(15);
 
-	binarySearchTree.readAll();*/
+	binarySearchTree.readAll();
 
 
 	/*Heap heap;
@@ -203,7 +203,7 @@ void RunTree()
 	heap.remove();*/
 
 
-	Trie trie;
+	/*Trie trie;
 	trie.insert("act");
 	trie.insert("cat");
 	trie.insert("can");
@@ -213,12 +213,12 @@ void RunTree()
 	trie.insert("zoom");
 	trie.insert("zone");
 
-	while (cin)
+	while (std::cin)
 	{
-		cout << "Type a word: ";
+		std::cout << "Type a word: ";
 
-		string word;
-		cin >> word;
+		std::string word;
+		std::cin >> word;
 
 		if (word == "-1")
 		{
@@ -226,29 +226,29 @@ void RunTree()
 		}
 
 		auto wordExists = trie.checkIfWordExists(word);
-		cout << "The word exists? " << (wordExists ? "Yes" : "No") << "\n\n";
+		std::cout << "The word exists? " << (wordExists ? "Yes" : "No") << "\n\n";
 
 		auto words = trie.autocomplete(word);
 
-		cout << "The auto completed words are:\n";
+		std::cout << "The auto completed words are:\n";
 		for (auto word : words)
 		{
-			cout << word << "\n";
+			std::cout << word << "\n";
 		}
 
-		cout << "\n";
-	}
+		std::cout << "\n";
+	}*/
 }
 
 int main()
 {
 	//RunSorting();
 
-	//RunSelection();
+	RunSelection();
 
 	//RunListing();
 
 	//RunRecursion();
 
-	RunTree();
+	//RunTree();
 }

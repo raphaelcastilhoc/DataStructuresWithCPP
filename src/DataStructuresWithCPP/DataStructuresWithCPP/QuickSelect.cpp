@@ -62,7 +62,7 @@ int QuickSelect::runSelectLowest(int position, int leftIndex, int rightIndex)
 	return elements[position];
 }
 
-int QuickSelect::selectLowest(vector<int>& numbers, int position)
+int QuickSelect::selectLowest(std::vector<int>& numbers, int position)
 {
 	elements = numbers;
 	auto result = runSelectLowest(position, 0, numbers.size() - 1);

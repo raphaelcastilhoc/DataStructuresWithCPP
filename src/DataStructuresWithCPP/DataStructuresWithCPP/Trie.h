@@ -3,30 +3,28 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 const int alphabetSize = 26;
 
 class Trie
 {
 public:
-    void insert(string word);
+    void insert(std::string word);
 
-    bool checkIfWordExists(string word);
+    bool checkIfWordExists(std::string word);
 
-    vector<string> autocomplete(string wordPrefix);
+    std::vector<std::string> autocomplete(std::string wordPrefix);
 
 private:
     struct Node
     {
-        shared_ptr<Node> children[alphabetSize];
+        std::shared_ptr<Node> children[alphabetSize];
 
         bool isEndOfWord;
     };
 
-    shared_ptr<Node> root;
+    std::shared_ptr<Node> root;
 
-    shared_ptr<Node> search(string word);
+    std::shared_ptr<Node> search(std::string word);
 
-    vector<string> collectAllWords(shared_ptr<Node> node, string word, shared_ptr<vector<string>> words = make_shared<vector<string>>());
+    std::vector<std::string> collectAllWords(std::shared_ptr<Node> node, std::string word, std::shared_ptr<std::vector<std::string>> words = std::make_shared<std::vector<std::string>>());
 };

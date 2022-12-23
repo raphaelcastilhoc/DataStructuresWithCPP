@@ -2,9 +2,6 @@
 
 #include <iostream>
 #include <vector>
-#include <string>
-
-using namespace std;
 
 class BinarySearchTree
 {
@@ -13,11 +10,11 @@ public:
 	{
 	public:
 		int value;
-		shared_ptr<Node> leftChild;
-		shared_ptr<Node> rightChild;
+		std::shared_ptr<Node> leftChild;
+		std::shared_ptr<Node> rightChild;
 	};
 
-	shared_ptr<Node> search(int searchValue);
+	std::shared_ptr<Node> search(int searchValue);
 
 	void insert(int value);
 
@@ -26,16 +23,16 @@ public:
 	void readAll();
 
 private:
-	shared_ptr<Node> root;
+	std::shared_ptr<Node> root;
 
-	shared_ptr<Node> search(int searchValue, shared_ptr<Node> node);
+	std::shared_ptr<Node> search(int searchValue, std::shared_ptr<Node> node);
 
-	void insert(int value, shared_ptr<Node> node);
+	void insert(int value, std::shared_ptr<Node> node);
 
-	shared_ptr<Node> remove(int value, shared_ptr<Node> node);
+	std::shared_ptr<Node> remove(int value, std::shared_ptr<Node> node);
 
-	shared_ptr<Node> lift(shared_ptr<Node> node, shared_ptr<Node> nodeTodelete);
+	std::shared_ptr<Node> lift(std::shared_ptr<Node> node, std::shared_ptr<Node> nodeTodelete);
 
-	void readAll(shared_ptr<Node> node);
+	void readAll(std::shared_ptr<Node> node);
 };
 

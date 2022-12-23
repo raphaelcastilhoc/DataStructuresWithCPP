@@ -1,10 +1,10 @@
 #include "Trie.h"
 
-void Trie::insert(string word)
+void Trie::insert(std::string word)
 {
 	if (root == nullptr)
 	{
-		root = make_shared<Node>();
+		root = std::make_shared<Node>();
 	}
 
 	auto node = root;
@@ -13,7 +13,7 @@ void Trie::insert(string word)
 	{
 		auto index = word[i] - 'a';
 		if (!node->children[index])
-			node->children[index] = make_shared<Node>();
+			node->children[index] = std::make_shared<Node>();
 
 		node = node->children[index];
 	}
@@ -21,13 +21,13 @@ void Trie::insert(string word)
 	node->isEndOfWord = true;
 }
 
-bool Trie::checkIfWordExists(string word)
+bool Trie::checkIfWordExists(std::string word)
 {
 	auto node = search(word);
 	return node ? node->isEndOfWord : false;
 }
 
-vector<string> Trie::autocomplete(string wordPrefix)
+std::vector<std::string> Trie::autocomplete(std::string wordPrefix)
 {
 	auto node = search(wordPrefix);
 	if (node)
@@ -36,7 +36,7 @@ vector<string> Trie::autocomplete(string wordPrefix)
 	}
 }
 
-shared_ptr<Trie::Node> Trie::search(string word)
+std::shared_ptr<Trie::Node> Trie::search(std::string word)
 {
 	auto node = root;
 
@@ -52,7 +52,7 @@ shared_ptr<Trie::Node> Trie::search(string word)
 	return node;
 }
 
-vector<string> Trie::collectAllWords(shared_ptr<Node> node, string word, shared_ptr<vector<string>> words)
+std::vector<std::string> Trie::collectAllWords(std::shared_ptr<Node> node, std::string word, std::shared_ptr<std::vector<std::string>> words)
 {
 	if (node->isEndOfWord)
 	{

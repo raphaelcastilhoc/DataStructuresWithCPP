@@ -2,7 +2,7 @@
 
 void Heap::insert(int value)
 {
-    auto newNodeValue = make_shared<int>(value);
+    auto newNodeValue = std::make_shared<int>(value);
     data.push_back(newNodeValue);
 
     auto newNodeIndex = data.size() - 1;
@@ -38,12 +38,12 @@ int Heap::remove()
     return removedNode;
 }
 
-shared_ptr<int> Heap::getRoot()
+std::shared_ptr<int> Heap::getRoot()
 {
     return data.front();
 }
 
-shared_ptr<int> Heap::getLastNode()
+std::shared_ptr<int> Heap::getLastNode()
 {
     return data.back();
 }

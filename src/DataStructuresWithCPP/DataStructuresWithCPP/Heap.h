@@ -3,8 +3,6 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 class Heap
 {
 public:
@@ -13,11 +11,11 @@ public:
 	int remove();
 
 private:
-	vector<shared_ptr<int>> data;
+	std::vector<std::shared_ptr<int>> data;
 
-	shared_ptr<int> getRoot();
+	std::shared_ptr<int> getRoot();
 
-	shared_ptr<int> getLastNode();
+	std::shared_ptr<int> getLastNode();
 
 	int getParentIndex(int index);
 

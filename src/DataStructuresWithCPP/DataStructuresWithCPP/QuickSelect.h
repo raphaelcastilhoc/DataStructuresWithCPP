@@ -2,15 +2,13 @@
 
 #include <vector>
 
-using namespace std;
-
 class QuickSelect
 {
 public:
-	int selectLowest(vector<int>& numbers, int position);
+	int selectLowest(std::vector<int>& numbers, int position);
 
 private:
-	vector<int> elements;
+	std::vector<int> elements;
 
 	void swapPositions(int& firstElement, int& secondElement);
 
