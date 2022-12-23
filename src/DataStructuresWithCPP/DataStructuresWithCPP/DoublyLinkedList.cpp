@@ -11,23 +11,23 @@ int* DoublyLinkedList::read(int index)
 		currentIndex += 1;
 	}
 
-	cout << "The element on doubly linked list index " << index << " is: " << currentNode->value << "\n";
+	std::cout << "The element on doubly linked list index " << index << " is: " << currentNode->value << "\n";
 
 	return &currentNode->value;
 }
 
-vector<int> DoublyLinkedList::readAll()
+std::vector<int> DoublyLinkedList::readAll()
 {
-	vector<int> nodeValues;
+	std::vector<int> nodeValues;
 
 	auto currentNode = firstNode;
 	nodeValues.push_back(firstNode->value);
 
-	cout << "The doubly linked list elements are: \n";
+	std::cout << "The doubly linked list elements are: \n";
 	while (currentNode)
 	{
 		nodeValues.push_back(currentNode->value);
-		cout << currentNode->value << "\n";
+		std::cout << currentNode->value << "\n";
 
 		currentNode = currentNode->nextNode;
 	}
@@ -35,11 +35,11 @@ vector<int> DoublyLinkedList::readAll()
 	return nodeValues;
 }
 
-void DoublyLinkedList::push(int value, shared_ptr<int> index)
+void DoublyLinkedList::push(int value, std::shared_ptr<int> index)
 {
 	if (firstNode == nullptr)
 	{
-		shared_ptr<Node>newNode(new Node{ value, nullptr, nullptr });
+		std::shared_ptr<Node>newNode(new Node{ value, nullptr, nullptr });
 		firstNode = newNode;
 		lastNode = newNode;
 		return;
@@ -56,16 +56,16 @@ void DoublyLinkedList::push(int value, shared_ptr<int> index)
 
 void DoublyLinkedList::pushAtEnd(int value)
 {
-	shared_ptr<Node> newNode(new Node{ value, lastNode, nullptr });
+	std::shared_ptr<Node> newNode(new Node{ value, lastNode, nullptr });
 	lastNode->nextNode = newNode;
 	lastNode = newNode;
 }
 
-void DoublyLinkedList::pushAtIndex(int value, shared_ptr<int> index)
+void DoublyLinkedList::pushAtIndex(int value, std::shared_ptr<int> index)
 {
 	if (*index == 0)
 	{
-		shared_ptr<Node>newNode(new Node{ value, nullptr, firstNode });
+		std::shared_ptr<Node>newNode(new Node{ value, nullptr, firstNode });
 		firstNode->previousNode = newNode;
 		firstNode = newNode;
 		return;
@@ -90,12 +90,12 @@ void DoublyLinkedList::pushAtIndex(int value, shared_ptr<int> index)
 		return;
 	}
 
-	shared_ptr<Node> newNode(new Node{ value, currentNode, currentNode->nextNode });
+	std::shared_ptr<Node> newNode(new Node{ value, currentNode, currentNode->nextNode });
 	currentNode->nextNode->previousNode = newNode;
 	currentNode->nextNode = newNode;
 }
 
-void DoublyLinkedList::remove(shared_ptr<int> index)
+void DoublyLinkedList::remove(std::shared_ptr<int> index)
 {
 	if (index == nullptr)
 	{
@@ -115,7 +115,7 @@ void DoublyLinkedList::removeAtEnd()
 	lastNode->nextNode = nullptr;
 }
 
-void DoublyLinkedList::removeAtIndex(shared_ptr<int> index)
+void DoublyLinkedList::removeAtIndex(std::shared_ptr<int> index)
 {
 	if (*index == 0)
 	{

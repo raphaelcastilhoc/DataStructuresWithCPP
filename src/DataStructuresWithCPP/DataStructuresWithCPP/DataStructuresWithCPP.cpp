@@ -66,7 +66,7 @@ void RunSelection()
 
 void RunListing()
 {
-	cout << "Running Stack \n";
+	/*cout << "Running Stack \n";
 	Stack stack;
 	stack.push(10);
 	stack.push(5);
@@ -80,7 +80,7 @@ void RunListing()
 	stack.read();
 	stack.readAll();
 
-	stack.popAll();
+	stack.popAll();*/
 
 
 	/*cout << "Running Queue \n";
@@ -120,33 +120,33 @@ void RunListing()
 	//linkedList.readAll();
 
 
-	//cout << "Running Doubly Linked List \n";
-	//DoublyLinkedList doublyLinkedList;
-	//doublyLinkedList.push(10);
-	//doublyLinkedList.push(5);
-	//doublyLinkedList.push(3);
-	//doublyLinkedList.push(7);
+	cout << "Running Doubly Linked List \n";
+	DoublyLinkedList doublyLinkedList;
+	doublyLinkedList.push(10);
+	doublyLinkedList.push(5);
+	doublyLinkedList.push(3);
+	doublyLinkedList.push(7);
 
-	////doublyLinkedList.read(1);
-	//doublyLinkedList.readAll();
+	//doublyLinkedList.read(1);
+	doublyLinkedList.readAll();
 
-	////doublyLinkedList.push(9, make_shared<int>(10));
-	////doublyLinkedList.push(9, make_shared<int>(0));
-	////doublyLinkedList.push(9, make_shared<int>(2));
+	//doublyLinkedList.push(9, make_shared<int>(10));
+	//doublyLinkedList.push(9, make_shared<int>(0));
+	//doublyLinkedList.push(9, make_shared<int>(2));
 
-	///*doublyLinkedList.read(2);
-	//doublyLinkedList.readAll();*/
+	/*doublyLinkedList.read(2);
+	doublyLinkedList.readAll();*/
 
-	//doublyLinkedList.remove(make_shared<int>(2));
-	//doublyLinkedList.remove(make_shared<int>(0));
+	doublyLinkedList.remove(make_shared<int>(2));
+	doublyLinkedList.remove(make_shared<int>(0));
 
-	//doublyLinkedList.readAll();
+	doublyLinkedList.readAll();
 
-	//doublyLinkedList.push(4);
-	//doublyLinkedList.push(8);
-	//doublyLinkedList.push(0, make_shared<int>(0));
+	doublyLinkedList.push(4);
+	doublyLinkedList.push(8);
+	doublyLinkedList.push(0, make_shared<int>(0));
 
-	//doublyLinkedList.readAll();
+	doublyLinkedList.readAll();
 }
 
 void RunRecursion()
@@ -252,9 +252,9 @@ int main()
 
 	//RunSelection();
 
-	//RunListing();
+	RunListing();
 
 	//RunRecursion();
 
-	RunTree();
+	//RunTree();
 }
