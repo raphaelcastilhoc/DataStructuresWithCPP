@@ -20,8 +20,6 @@
 #include "Heap.h"
 #include "Trie.h"
 
-namespace fs = std::filesystem;
-
 void RunSorting()
 {
 	vector<int> numbers { 10, 8, 5, 7, 3, 4, 1, 6, 2, 9 };
@@ -158,11 +156,11 @@ void RunRecursion()
 	cout << "Fibonacci of " << number << " is: " << fibonacciResult;*/
 
 	/*DirectoryFinder directoryFinder;
-	directoryFinder.findSubdirectories(fs::current_path().string());*/
+	directoryFinder.findSubdirectories(std::filesystem::current_path().string());*/
 
-	MaxNumber maxNumber;
+	/*MaxNumber maxNumber;
 	auto result = maxNumber.run(vector<int>{2, 8, 10, 4, 5});
-	cout << "Max number is: " << result;
+	cout << "Max number is: " << result;*/
 }
 
 void RunTree()
@@ -244,7 +242,7 @@ void RunTree()
 
 int main()
 {
-	RunSorting();
+	//RunSorting();
 
 	//RunSelection();
 
@@ -252,5 +250,5 @@ int main()
 
 	//RunRecursion();
 
-	//RunTree();
+	RunTree();
 }

@@ -1,12 +1,15 @@
+#include <fstream>
+#include <filesystem>
+
 #include "DirectoryFinder.h"
 
-void DirectoryFinder::findSubdirectories(string directoryPath)
+void DirectoryFinder::findSubdirectories(std::string directoryPath)
 {
-	if (fs::is_directory(directoryPath))
+	if (std::filesystem::is_directory(directoryPath))
 	{
-		cout << "Directory: " << directoryPath << "\n";
+		std::cout << "Directory: " << directoryPath << "\n";
 		
-		for (const auto& entry : fs::directory_iterator(directoryPath))
+		for (const auto& entry : std::filesystem::directory_iterator(directoryPath))
 		{
 			findSubdirectories(entry.path().string());
 		}
