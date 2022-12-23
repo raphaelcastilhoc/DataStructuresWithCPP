@@ -1,14 +1,11 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
-
-using namespace std;
 
 class Queue
 {
 private:
-	vector<int> queue;
+	std::vector<int> queue;
 
 public:
 	void enqueue(int number);
@@ -19,6 +16,6 @@ public:
 
 	int read();
 
-	vector<int> readAll();
+	std::vector<int> readAll();
 };
 

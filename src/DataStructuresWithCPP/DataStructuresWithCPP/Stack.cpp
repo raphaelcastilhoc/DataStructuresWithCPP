@@ -1,9 +1,11 @@
 #include "Stack.h"
 
+#include <iostream>
+
 void Stack::push(int element)
 {
 	stack.push_back(element);
-	cout << element << " stacked \n";
+	std::cout << element << " stacked \n";
 }
 
 void Stack::pop()
@@ -12,7 +14,7 @@ void Stack::pop()
 	{
 		auto dequeuedElement = stack.back();
 		stack.pop_back();
-		cout << dequeuedElement << " unstacked \n";
+		std::cout << dequeuedElement << " unstacked \n";
 	}
 }
 
@@ -29,17 +31,17 @@ int Stack::read()
 	if (!stack.empty())
 	{
 		int lastElement = stack.back();
-		cout << "The element on stack top is: " << lastElement << "\n";
+		std::cout << "The element on stack top is: " << lastElement << "\n";
 		return lastElement;
 	}
 }
 
-vector<int> Stack::readAll()
+std::vector<int> Stack::readAll()
 {
-	cout << "The stack elements are: \n";
+	std::cout << "The stack elements are: \n";
 	for (int i = stack.size() - 1; i >= 0; i--)
 	{
-		cout << stack[i] << "\n";
+		std::cout << stack[i] << "\n";
 	}
 
 	return stack;

@@ -23,7 +23,6 @@
 #include "Heap.h"
 #include "Trie.h"
 
-using namespace std;
 namespace fs = std::filesystem;
 
 void RunSorting()
@@ -66,7 +65,7 @@ void RunSelection()
 
 void RunListing()
 {
-	/*cout << "Running Stack \n";
+	std::cout << "Running Stack \n";
 	Stack stack;
 	stack.push(10);
 	stack.push(5);
@@ -80,10 +79,10 @@ void RunListing()
 	stack.read();
 	stack.readAll();
 
-	stack.popAll();*/
+	stack.popAll();
 
 
-	/*cout << "Running Queue \n";
+	/*std::cout << "Running Queue \n";
 	Queue queue;
 	queue.enqueue(10);
 	queue.enqueue(5);
@@ -100,27 +99,27 @@ void RunListing()
 	queue.dequeueAll();*/
 
 
-	cout << "Running Linked List \n";
-	LinkedList linkedList;
-	linkedList.push(10);
-	linkedList.push(5);
-	linkedList.push(3);
-	linkedList.push(7);
+	//std::cout << "Running Linked List \n";
+	//LinkedList linkedList;
+	//linkedList.push(10);
+	//linkedList.push(5);
+	//linkedList.push(3);
+	//linkedList.push(7);
 
-	linkedList.read(1);
-	linkedList.readAll();
+	//linkedList.read(1);
+	//linkedList.readAll();
 
-	linkedList.push(8, make_shared<int>(0));
-	linkedList.push(9, make_shared<int>(4));
-	linkedList.push(2, make_shared<int>(10));
+	//linkedList.push(8, make_shared<int>(0));
+	//linkedList.push(9, make_shared<int>(4));
+	//linkedList.push(2, make_shared<int>(10));
 
-	linkedList.remove(0);
-	//linkedList.remove(2);
+	//linkedList.remove(0);
+	////linkedList.remove(2);
 
-	linkedList.readAll();
+	//linkedList.readAll();
 
 
-	//cout << "Running Doubly Linked List \n";
+	//std::cout << "Running Doubly Linked List \n";
 	//DoublyLinkedList doublyLinkedList;
 	//doublyLinkedList.push(10);
 	//doublyLinkedList.push(5);

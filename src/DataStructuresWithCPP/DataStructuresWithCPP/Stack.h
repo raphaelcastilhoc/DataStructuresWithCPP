@@ -1,14 +1,11 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
-
-using namespace std;
 
 class Stack
 {
 private:
-	vector<int> stack;
+	std::vector<int> stack;
 
 public:
 	void push(int number);
@@ -19,6 +16,6 @@ public:
 
 	int read();
 
-	vector<int> readAll();
+	std::vector<int> readAll();
 };
 
