@@ -131,6 +131,7 @@
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="DataStructuresWithCPP.cpp" />
+    <ClCompile Include="DepthFirstSearching.cpp" />
     <ClCompile Include="DirectoryFinder.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="Factorial.cpp" />
@@ -149,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="DepthFirstSearching.h" />
     <ClInclude Include="DirectoryFinder.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Factorial.h" />

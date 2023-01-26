@@ -43,6 +43,12 @@
     <Filter Include="Source Files\Trees">
       <UniqueIdentifier>{ebe01eaf-22d7-4bfe-b2c0-9d7e11d1702a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Graph">
+      <UniqueIdentifier>{b6a0274b-4f0b-4995-92ec-855d11af280a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graph">
+      <UniqueIdentifier>{bd0d7c74-2014-4ce4-8420-b6026aa96bf5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructuresWithCPP.cpp">
@@ -96,6 +102,9 @@
     <ClCompile Include="Trie.cpp">
       <Filter>Source Files\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="DepthFirstSearching.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -145,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="Trie.h">
       <Filter>Header Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthFirstSearching.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -19,6 +19,7 @@
 #include "BinarySearchTree.h"
 #include "Heap.h"
 #include "Trie.h"
+#include "DepthFirstSearching.h"
 
 void RunSorting()
 {
@@ -240,15 +241,52 @@ void RunTree()
 	}*/
 }
 
+void RunGraph()
+{
+	DepthFirstSearching depthFirstSearching;
+	
+	auto rootVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "Raphael" });
+	auto firstVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "John" });
+	auto secondVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "Gabi" });
+	auto thirdVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "Mary" });
+	auto fourthVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "Arthur" });
+
+	rootVertex->addAdjacentVertex(firstVertex);
+	rootVertex->addAdjacentVertex(thirdVertex);
+	rootVertex->addAdjacentVertex(fourthVertex);
+
+	secondVertex->addAdjacentVertex(thirdVertex);
+	secondVertex->addAdjacentVertex(fourthVertex);
+
+	fourthVertex->addAdjacentVertex(firstVertex);
+	fourthVertex->addAdjacentVertex(secondVertex);
+
+	auto searchedVertext = depthFirstSearching.search(rootVertex, std::make_shared<std::string>("Gabi"));
+	if (searchedVertext != nullptr)
+	{
+		std::cout << "Adjacent vertices from searched vertex " << searchedVertext->name << ":\n";
+		for (auto adjacentVertice : searchedVertext->adjacentVertices)
+		{
+			std::cout << adjacentVertice->name << "\n";
+		}
+	}
+	else
+	{
+		std::cout << "None adjacent vertex found.\n";
+	}
+}
+
 int main()
 {
 	//RunSorting();
 
-	RunSelection();
+	//RunSelection();
 
 	//RunListing();
 
 	//RunRecursion();
 
 	//RunTree();
+
+	RunGraph();
 }
