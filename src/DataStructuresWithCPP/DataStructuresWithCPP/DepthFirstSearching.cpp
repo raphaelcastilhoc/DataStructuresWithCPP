@@ -12,10 +12,12 @@ std::shared_ptr<DepthFirstSearching::Vertex> DepthFirstSearching::search(std::sh
 }
 
 std::shared_ptr<DepthFirstSearching::Vertex> DepthFirstSearching::search(std::shared_ptr<DepthFirstSearching::Vertex> vertex,
-	std::shared_ptr<std::string> name,
+	std::shared_ptr<std::string> searchName,
 	std::shared_ptr<std::map<std::string, bool>> visitedVertices)
 {
-	if (name->compare(vertex->name) == 0)
+	std::cout << "Checking vertex " << vertex->name << "\n";
+
+	if (searchName->compare(vertex->name) == 0)
 	{
 		return vertex;
 	}
@@ -24,12 +26,19 @@ std::shared_ptr<DepthFirstSearching::Vertex> DepthFirstSearching::search(std::sh
 
 	for (auto adjacentVertex : vertex->adjacentVertices)
 	{
-		if (name->compare(adjacentVertex->name) == 0)
+		if ((*visitedVertices)[adjacentVertex->name])
+		{
+			continue;
+		}
+
+		std::cout << "Checking adjacent vertex " << adjacentVertex->name << " from vertex " << vertex->name << "\n";
+
+		if (searchName->compare(adjacentVertex->name) == 0)
 		{
 			return adjacentVertex;
 		}
 
-		auto searchedVertex = search(adjacentVertex, name, visitedVertices);
+		auto searchedVertex = search(adjacentVertex, searchName, visitedVertices);
 		if (searchedVertex != nullptr)
 		{
 			return searchedVertex;

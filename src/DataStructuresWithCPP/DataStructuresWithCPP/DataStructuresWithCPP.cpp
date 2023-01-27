@@ -20,6 +20,7 @@
 #include "Heap.h"
 #include "Trie.h"
 #include "DepthFirstSearching.h"
+#include "BreadthFirstSearching.h"
 
 void RunSorting()
 {
@@ -243,7 +244,7 @@ void RunTree()
 
 void RunGraph()
 {
-	DepthFirstSearching depthFirstSearching;
+	/*DepthFirstSearching depthFirstSearching;
 	
 	auto rootVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "Raphael" });
 	auto firstVertex = std::make_shared<DepthFirstSearching::Vertex>(DepthFirstSearching::Vertex{ "John" });
@@ -254,6 +255,49 @@ void RunGraph()
 	rootVertex->addAdjacentVertex(firstVertex);
 	rootVertex->addAdjacentVertex(thirdVertex);
 	rootVertex->addAdjacentVertex(fourthVertex);
+	rootVertex->addAdjacentVertex(secondVertex);
+
+	firstVertex->addAdjacentVertex(thirdVertex);
+
+	secondVertex->addAdjacentVertex(thirdVertex);
+	secondVertex->addAdjacentVertex(fourthVertex);
+
+	thirdVertex->addAdjacentVertex(firstVertex);
+	thirdVertex->addAdjacentVertex(fourthVertex);
+
+	fourthVertex->addAdjacentVertex(firstVertex);
+	fourthVertex->addAdjacentVertex(secondVertex);
+
+	auto searchedVertext = depthFirstSearching.search(rootVertex, std::make_shared<std::string>("Gabi"));
+	if (searchedVertext != nullptr)
+	{
+		std::cout << "Adjacent vertices from searched vertex " << searchedVertext->name << ":\n";
+		for (auto adjacentVertice : searchedVertext->adjacentVertices)
+		{
+			std::cout << adjacentVertice->name << "\n";
+		}
+	}
+	else
+	{
+		std::cout << "None adjacent vertex found.\n";
+	}*/
+
+
+
+	BreadthFirstSearching breadthFirstSearching;
+
+	auto rootVertex = std::make_shared<BreadthFirstSearching::Vertex>(BreadthFirstSearching::Vertex{ "Raphael" });
+	auto firstVertex = std::make_shared<BreadthFirstSearching::Vertex>(BreadthFirstSearching::Vertex{ "John" });
+	auto secondVertex = std::make_shared<BreadthFirstSearching::Vertex>(BreadthFirstSearching::Vertex{ "Gabi" });
+	auto thirdVertex = std::make_shared<BreadthFirstSearching::Vertex>(BreadthFirstSearching::Vertex{ "Mary" });
+	auto fourthVertex = std::make_shared<BreadthFirstSearching::Vertex>(BreadthFirstSearching::Vertex{ "Arthur" });
+
+	rootVertex->addAdjacentVertex(firstVertex);
+	rootVertex->addAdjacentVertex(thirdVertex);
+	rootVertex->addAdjacentVertex(fourthVertex);
+	rootVertex->addAdjacentVertex(secondVertex);
+
+	firstVertex->addAdjacentVertex(fourthVertex);
 
 	secondVertex->addAdjacentVertex(thirdVertex);
 	secondVertex->addAdjacentVertex(fourthVertex);
@@ -261,7 +305,7 @@ void RunGraph()
 	fourthVertex->addAdjacentVertex(firstVertex);
 	fourthVertex->addAdjacentVertex(secondVertex);
 
-	auto searchedVertext = depthFirstSearching.search(rootVertex, std::make_shared<std::string>("Gabi"));
+	auto searchedVertext = breadthFirstSearching.search(rootVertex, std::make_shared<std::string>("Gabi"));
 	if (searchedVertext != nullptr)
 	{
 		std::cout << "Adjacent vertices from searched vertex " << searchedVertext->name << ":\n";

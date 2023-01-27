@@ -105,6 +105,9 @@
     <ClCompile Include="DepthFirstSearching.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
+    <ClCompile Include="BreadthFirstSearching.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h">
@@ -156,7 +159,10 @@
       <Filter>Header Files\Trees</Filter>
     </ClInclude>
     <ClInclude Include="DepthFirstSearching.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="BreadthFirstSearching.h">
+      <Filter>Header Files\Graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
